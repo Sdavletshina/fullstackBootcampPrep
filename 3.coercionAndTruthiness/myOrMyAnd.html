@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>coersionAndThruthiness</title>
+	<style type="text/css">
+		div {
+			border: 1px solid grey;
+			width: 50%;
+			padding: 1%;
+		}
+	</style>
+</head>
+<body>
+	<h1>My Or, My And</h1>
+<p>
+Define a function, <em>myOr</em>, that accepts three arguments of any type.
+
+<em>myOr</em> should return the same result as the buit-in || operator:</p>
+<div>
+myOr(true, true, false) === (true || true || false); // => true
+</div>
+
+<p>Then, define a function, <em>myAnd</em>, that accepts three arguments of any type.
+
+<em>myAnd</em> should return the same result as the buit-in && operator:
+<div>
+myAnd(1, 'apples', true) === (1 && 'apples' && true); // => true
+</div>
+</p>
+
+<script type="text/javascript">
+const myOr = (arg1,arg2,arg3) => arg1||arg2||arg3
+const myAnd = (arg1,arg2,arg3) => arg1&&arg2&&arg3
+
+</script>
+</body>
+</html>

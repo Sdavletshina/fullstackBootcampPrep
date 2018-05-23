@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>coersionAndThruthiness</title>
+	<style type="text/css">
+		div {
+			border: 1px solid grey;
+			width: 50%;
+			padding: 1%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Is Truthy</h1>
+<p>
+Write a function <em>isTruthy</em> that accepts a single argument of any type.<br>
+
+<em>isTruthy</em> should return true if that argument is 'truthy'.<br>
+
+If the value is 'falsey', log out one of the messages below, corresponding to the type of the value tested.
+<div>
+'The boolean value false is falsey'<br>
+'The null value is falsey'<br>
+'undefined is falsey'<br>
+'The number 0 is falsey (the only falsey number)'<br>
+'The empty string is falsey (the only falsey string)'
+</div>
+</p>
+
+<script type="text/javascript">
+const isTruthy = (arg) => {
+	if (arg) return true;
+	switch (arg) {
+		case false:
+		return "The boolean value false is falsey";
+		case null:
+		return "The null value is falsey";
+		case undefined:
+		return "undefined is falsey";
+		case 0:
+		return "The number 0 is falsey (the only falsey number)";
+		case "":
+		return "The empty string is falsey (the only falsey string)";
+		default:
+		return "Nan is falsey";
+	}
+}
+
+</script>
+</body>
+</html>

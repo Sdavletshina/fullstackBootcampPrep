@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>coersionAndThruthiness</title>
+	<style type="text/css">
+		div {
+			border: 1px solid grey;
+			width: 50%;
+			padding: 1%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Only One</h1>
+<p>
+Write a function onlyOne that accepts three arguments of any type. onlyOne should return true only if exactly one of the three arguments are truthy. Otherwise, it should return false. Do not use the equality operators (== and ===) in your solution. </p>
+
+<div>
+onlyOne(false, false, true); // => true <br>
+onlyOne(0, 1, 2) // => false
+</div>
+
+<script type="text/javascript">
+const onlyOne = (arg1, arg2, arg3) => !!arg1 + !!arg2 + !!arg3 === 1;
+
+
+</script>
+</body>
+</html>
