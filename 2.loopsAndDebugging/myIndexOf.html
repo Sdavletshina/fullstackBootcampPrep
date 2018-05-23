@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loopsAndDebugging</title>
+</head>
+<body>
+	<h1>My Index Of</h1>
+
+<p>Define a function, myIndexOf, that accepts three arguments:</p>
+<ol>
+	<li>source (string)</li>
+	<li>searchValue (string)</li>
+	<li>startIdx (number) - optional</li>
+</ol>
+<p>If the <em>source</em> contains the <em>searchValue</em>, return the index at which the <em>searchValue</em> starts. If the <em>searchValue</em> appears more than once in the source, return the index from the first occurance of the <em>searchValue</em>. If the <em>searchValue</em> doesn't exist in the source, return -1.
+
+If a <em>startIdx</em> is passed into the function, ignore any instances of the <em>searchValue</em> that occur before that index. If no <em>startIdx</em> is provided, start searching from the beginning of the source.
+
+Do not use the built-in .indexOf string method in your answer. Feel free to use it in all future workshop problems though!
+</p>
+
+<script type="text/javascript">
+const myIndexOf = (source, searchValue, startIdx=0) => {
+for(let i=startIdx; i<source.length; i++){
+	if(source[i]===searchValue){return i;}
+	
+}return -1;
+}
+</script>
+</body>
+</html>

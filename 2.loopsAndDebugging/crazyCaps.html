@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loopsAndDebugging</title>
+</head>
+<body>
+	<h1>Crazy Caps</h1>
+<p>
+Define a function, <em>crazyCaps</em>, that accepts a string as an argument. <em>crazyCaps</em> should return a string in which every other character is capitalized. The first letter should be lower-cased.</p>
+
+<script type="text/javascript">
+const crazyCaps = (string) => {
+	let crazyWord = "";
+	let stringLowerCase = string.toLowerCase();
+	for(let i=0; i<stringLowerCase.length; i++){
+		if(i%2===0){crazyWord += stringLowerCase[i].toUpperCase();}
+			else{crazyWord += stringLowerCase[i];}
+		}
+		return crazyWord; 
+	}
+
+</script>
+</body>
+</html>

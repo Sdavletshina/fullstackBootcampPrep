@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loopsAndDebugging</title>
+	<style>
+		span{ 
+		display:block;
+		border: 1px solid grey;
+		width: 70%;
+		margin: 1%;
+		padding-left: 1%;
+		}
+	</style>
+</head>
+<body>
+	<h1>Most Vowels</h1>
+
+<p> Define a function, <em>mostVowels</em>, that accepts one argument, a string of words.
+
+<em>mostVowels</em> should return the word that has the most vowels.
+
+<span> mostVowels('I am a keeper with some real rhythms'); // => keeper</span>
+If none of the words have any vowels, return an empty string.
+
+<span>mostVowels('try my gym'); // => ''</span>
+</p>
+
+<script type="text/javascript">
+	const mostVowels = (aStr) => {
+		let wordsArray = aStr
+		.split(".")
+		.join("")
+		.split(",")
+		.join("")
+		.split(" ");
+		let VOWELS = "aeiouAEIOU";
+		let maxVowelCount = 0;
+		let maxWord = "";
+		for(let i=0; i<wordsArray.length; i++){
+			let currentWord = wordsArray[i];
+			let currentVowelCount = 0;
+
+			for (let j=0; j<currentWord.length; j++){
+				let currentLetter = currentWord[j];
+				if(VOWELS.indexOf(currentLetter)!==-1){
+					++currentVowelCount;
+				}
+
+			}
+
+			if (currentVowelCount>maxVowelCount){
+				maxVowelCount = currentVowelCount;
+				maxWord = currentWord;
+			}
+		} 
+		return maxWord;
+	}
+</script>
+
+</body>
+</html>
