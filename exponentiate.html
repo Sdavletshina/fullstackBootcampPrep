@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>loopsAndDebugging</title>
+</head>
+<body>
+	<h1>Exponentiate</h1>
+<p>
+	Write a function exponentiate that accepts two arguments:
+</p>
+
+<ol>
+	<li>base (number)</li>
+	<li>power (number)</li>
+</ol>
+
+
+<p>
+	<em>exponentiate</em> should return the result of raising the base by the power. Assume the power argument will always be an integer greater than or equal to zero. Don't forget that any number raised to the 0th power is equal to 1!
+</p>
+<p>
+	Do not use the built-in Math.pow() method, but feel free to use it moving forward!
+</p>
+
+
+<script type="text/javascript">
+
+const exponentiate = (base, power) => {
+	let exponentiatedValue = 1;
+	for(let i=1; i<=power; i++){
+		exponentiatedValue *=base;
+	}
+return exponentiatedValue;
+}
+
+</script>
+</body>
+</html>
