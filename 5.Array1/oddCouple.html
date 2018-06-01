@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scope</title>
+	<style type="text/css">
+		div {
+			border: 1px solid grey;
+			width: 50%;
+			padding: 1%;
+			margin: 1%;
+		}
+	</style>
+</head>
+<body>
+<h1>oddCouple</h1>
+
+<p>Define a function, <em>oddCouple</em>, that accepts an array of numbers as an argument.<br>
+
+<em>oddCouple</em> should return a new array with the first two odd numbers from the original array:
+
+<div>
+oddCouple([1, 2, 3, 4, 5]); // => [1, 3]
+</div>
+
+If fewer than two odd numbers exist in the original array, return an empty array or an array with the only odd number:
+</p>
+<div>
+oddCouple([10, 15, 20]); // => [15]<br>
+oddCouple(2, 4, 6, 8); // => []
+</div>
+<script type="text/javascript">
+const oddCouple = (arrOfNums) => {
+  let oddArr = [];
+ for(let i = 0; i<arrOfNums.length; i++){
+   let currChar = arrOfNums[i];
+  if(currChar%2===1) oddArr.push(currChar);
+  if(oddArr.length === 2) return oddArr;
+}
+ return oddArr;
+}
+
+
+</script>
+</body>
+</html>

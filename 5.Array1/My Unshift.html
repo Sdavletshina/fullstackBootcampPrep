@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scope</title>
+	<style type="text/css">
+		div {
+			border: 1px solid grey;
+			width: 50%;
+			padding: 1%;
+			margin: 1%;
+		}
+	</style>
+</head>
+<body>
+<h1>My Unshift</h1>
+<p>Write a function <em>myUnshift</em> that takes an array and a value of any type as arguments.<br>
+
+<em>myUnshift</em> should return a new array, with the given value as the first element in the new array.
+<div>
+myUnshift([1, 2, 3], 0); / => [0, 1, 2, 3];</div> <br>
+Do not use the built-in .shift method for this problem!
+
+<script type="text/javascript">
+const myUnshift = (arr, arg) => {
+  let newArr = [];
+  newArr.push(arg);
+  
+  for (let i = 0; i<arr.length; i++){
+    let currChar = arr[i];
+    newArr.push(currChar);
+  }
+  return newArr;
+}
+
+
+</script>
+</body>
+</html>

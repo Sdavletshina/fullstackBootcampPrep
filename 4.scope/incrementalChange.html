@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scope</title>
+</head>
+<body>
+<h1>Incremental Change</h1>
+
+<p>Define a function incrementalChange that accepts a number and increments the global variable counter by that amount. The function should also return the current value of the counter after the increment operation.
+
+Each successive call to incrementalChange should progressively change the value held by the counter.
+
+<div>
+let counter = 0;
+
+incrementalChange(2); // => 2<br>
+incrementalChange(6); // => 8<br>
+incrementalChange(-1); // => 7
+</div>
+<script type="text/javascript">
+	let counter = 0
+	let incrementalChange = (num) =>  {
+		counter += num;
+		return counter;
+	}
+
+
+
+</script>
+</body>
+</html>

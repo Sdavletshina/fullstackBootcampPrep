@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scope</title>
+		<style type="text/css">
+		div {
+			border: 1px solid grey;
+			width: 50%;
+			padding: 1%;
+			margin: 1%;
+		}
+	</style>
+</head>
+<body>
+<h1>My Includes</h1>
+
+<p> Define a function, <em>myIncludes</em>, that accepts an array and a searchValue.<br>
+
+<em>myIncludes</em> should return true if the searchValue is an element in the array. Otherwise, <em>myIncludes</em> should return false.<br>
+
+Do not use the built-in .includes array method during this problem. Feel free to use it on any future problem though! Note that strings have an .includes method, too.</p><br>
+<div>
+myIncludes([10, 20, 30], 20); // => true
+myIncludes(['apples', 'bananas', 'citrus'], 'pears'); // => false
+</div>
+
+<script type="text/javascript">
+const myIncludes = (anArr, searchValue) => {
+  for(let i=0; i<anArr.length; ++i){
+    const anElem = anArr[i];
+    if(searchValue===anElem) return true;
+    
+  }
+  return false;
+}
+</script>
+</body>
+</html>

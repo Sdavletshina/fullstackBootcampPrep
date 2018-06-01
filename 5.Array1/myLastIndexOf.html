@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>scope</title>
+	<style type="text/css">
+		div {
+			border: 1px solid grey;
+			width: 50%;
+			padding: 1%;
+			margin: 1%;
+		}
+	</style>
+</head>
+<body>
+<h1>My Last Index Of</h1>
+
+<p>Define a function, myLastIndexOf, that accepts up to three arguments:
+<ol>
+	<li>array</li>
+	<li>searchValue</li>
+	<li>startIdx (optional)</li>
+</ol>
+
+<em>myLastIndexOf</em> should return the last index at which the searchValue appears in the array.
+
+<div> myLastIndexOf(['gee', 'gee', 'gee', 'gee', 'baby', 'baby'], 'gee'); // => 3</div><br>
+
+If the <em>searchValue</em> isn't in the array, myLastIndexOf should return -1.<br>
+
+<div>myLastIndexOf(['Tiffany', 'Sunny', 'Yoona'], 'Jessica'); // => -1</div><br>
+If <em>startIdx</em> is defined, <em>myLastIndexOf</em> should start looking for the seachValue at that index, and then move toward the front of the array as it looks for the value.<br>
+<div>
+myLastIndexOf(['the', 'girls', 'bring', 'the', 'boys', 'out'], 'the', 2); // => 0</div><br>
+You cannot use the built-in .lastIndexOf method for this problem, but feel free to use it in the future! Note that strings also have a .lastIndexOf method.</p>
+
+<script type="text/javascript">
+const myLastIndexOf = (arr, searchValue, startIdx=arr.length) => {
+  for(let i = startIdx; i>=0; i--){
+    var currEl = arr[i];
+    if(currEl===searchValue) return i;
+  } 
+   return -1;
+}
+
+
+
+</script>
+</body>
+</html>
