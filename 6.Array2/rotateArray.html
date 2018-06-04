@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>array2</title>
+</head>
+<body>
+<style type="text/css">
+		div {
+			border: 1px solid grey;
+			width: 30%;
+			padding: 1%;
+			margin: 1%;
+		}
+	</style>
+</head>
+<body>
+<h1>Rotate Array</h1>
+
+<p>Define a function, <em>rotateArray</em>, that accepts two arguments:
+	<ol>
+		<li>originalArray (array)</li>
+		<li>rotateNum (number)</li>
+	</ol>
+
+If the rotateNum is positive, rotate should return a copy of the original array rotated to the right by the rotateNum of indices.
+
+<div>
+rotate([1, 2, 3, 4, 5], 1) // => [5, 1, 2, 3, 4]</div>
+If the rotateNum is negative, rotate should return a copy of the original array rotated to the left by the rotateNum of indices.
+
+<div>rotate([1, 2, 3, 4, 5], -1) // => [2, 3, 4, 5, 1]</div>
+If the rotateNum is 0, rotate should return a copy of the original array without rotating it.
+
+<div>rotate([1, 2, 3, 4, 5], 0) // => [1, 2, 3, 4, 5]</div>
+You can assume the absolute value of rotateNum will be less than the length of the original array.
+
+
+<script type="text/javascript">
+const rotateArray = (anArr, numOfRot) => {
+  const direction = numOfRot >=0 ? 'right' : 'left';
+  rotatedArr = anArr.slice();
+  
+  for(let i=0; i<Math.abs(numOfRot)%anArr.length; i++){
+      if(direction==='right') rotatedArr.unshift(rotatedArr.pop());
+      else rotatedArr.push(rotatedArr.shift());
+  }
+  return rotatedArr;
+
+}
+ 
+</script>
+
+</body>
+</html>

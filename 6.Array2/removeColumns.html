@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>array2</title>
+</head>
+<body>
+<style type="text/css">
+		div {
+			border: 1px solid grey;
+			width: 30%;
+			padding: 1%;
+			margin: 1%;
+		}
+	</style>
+</head>
+<body>
+<h1>Remove Columns</h1>
+
+<p>Write a function removeColumns that accepts two arguments<br>
+<ul>
+	<li>originalGrid (two-dimensional array)</li>
+	<li>numColums (number)</li>
+</ul>
+
+<em>removeColumns</em> should return a new grid with the correct number of columns removed.
+
+<div>
+	removeColumns([[1, 2, 3],<br>
+               [1, 2, 3],<br>
+               [1, 2, 3],<br>
+               [1, 2, 3]], 2);<br>
+/* => [[1],<br>
+       [1],<br>
+       [1],<br>
+       [1]]<br>
+*/
+</div>
+
+<script type="text/javascript">
+const removeColumns = (aGrid, numColums) => {
+	const newGrid = [];
+	for (let i = 0; i<aGrid.length; ++i){
+		const aRow = aGrid[i];
+		const slicedRow = aRow.slice(0, aRow.length - numColums);
+		newGrid.push(slicedRow);
+	} return newGrid;
+}
+
+</script>
+
+</body>
+</html>

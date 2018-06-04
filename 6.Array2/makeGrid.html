@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>array2</title>
+	<style type="text/css">
+		div {
+			border: 1px solid grey;
+			width: 30%;
+			padding: 1%;
+			margin: 1%;
+		}
+	</style>
+</head>
+<body>
+<h1>Make Grid</h1>
+
+<p>Write a function makeGrid that accepts two arguments:<br>
+<ul>
+<li>numColumns (number)</li>
+<li>numRows (number)</li>
+<em>makeGrid</em> should return a two-dimensional array that represents a grid of the given dimensions.
+<div>
+makeGrid(3,4);<br>
+/* => [[1, 2, 3],<br>
+       [1, 2, 3],<br>
+       [1, 2, 3],<br>
+       [1, 2, 3]]<br>
+*/	
+</div>
+
+<script type="text/javascript">
+const makeGrid = (numOfCol, numOfRows) => {
+  const makeRow = () => {
+    const aRow = [];
+    for(var i = 1; i<=numOfCol; i++){
+  aRow.push(i);
+} return aRow;
+  }
+
+const grid = [];
+for(var j = 0; j<numOfRows; j++){
+  grid.push(makeRow());
+}
+return grid;
+}
+
+</script>
+</body>
+</html>

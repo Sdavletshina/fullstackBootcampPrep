@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>array2</title>
+	<style type="text/css">
+		div {
+			border: 1px solid grey;
+			width: 50%;
+			padding: 1%;
+			margin: 1%;
+		}
+	</style>
+</head>
+<body>
+<h1>Even and Odd</h1>
+
+<p>Define a function, <em>evenAndOdd</em>, that accepts an array.<br>
+
+<em>evenAndOdd</em> should return a new array. The first element in the new array should be an array with all of the even numbers from the original array. The second element in the new array should be an array with all of the odd numbers from the original array.<br>
+<div>
+evenAndOdd([1, 2, 3, 4, 5, 6]); // => [[ 2 ,4, 6 ], [ 1, 3, 5 ]]
+</div>
+<script type="text/javascript">
+const evenAndOdd = (anArr) => {
+  const oddArr = [];
+  const evenArr = [];
+  for(let i = 0; i<anArr.length; ++i) {
+    const anElem = anArr[i];
+    if(anElem%2) oddArr.push(anElem);
+    else evenArr.push(anElem);
+  }
+  return [evenArr, oddArr];
+}
+
+</script>
+</body>
+</html>
